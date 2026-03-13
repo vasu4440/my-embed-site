@@ -21,7 +21,7 @@
 <h1>My AI Application</h1>
 <p>This is my embedded deployment</p>
 
-<!-- Replace this with your deployment embed code -->
+<!-- Replace this with your deployment embed code 
 
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -42,6 +42,28 @@
 	};
 </script>
 <script type='text/javascript' src='https://orgfarm-fcfd0491e7-dev-ed.develop.my.site.com/ESWMessaging1761313813049/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+-->
+<script type='text/javascript'>
+function initEmbeddedMessaging() {
+  try {
+    embeddedservice_bootstrap.init(
+      '00Dg5000000Z1io',
+      'Messaging',
+      'https://orgfarm-fcfd0491e7-dev-ed.develop.my.salesforce-scrt.com',
+      {}
+    );
+  } catch (err) {
+    console.error('Error loading Embedded Messaging: ', err);
+  }
+};
+</script>
 
+<script
+src="https://orgfarm-fcfd0491e7-dev-ed.develop.my.salesforce-scrt.com/embeddedservice/asyncclient/bootstrap.min.js"
+onload="initEmbeddedMessaging()">
+</script>
+
+
+	
 </body>
 </html>
